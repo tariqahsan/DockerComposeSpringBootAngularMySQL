@@ -18,3 +18,26 @@ C:\Users\Tariq Ahsan\Desktop\Docker\DockerComposeSpringBootAngularMySQL\angular-
 # We are going to deploy the entire stack with the docker compose command
 e.g.
 C:\Users\Tariq Ahsan\Desktop\Docker\DockerComposeSpringBootAngularMySQL>docker-compose up
+# Connecting to the MySQL database and running command line SQL commands
+docker exec -it mysql-standalone bash -l
+mysql -usa -ppassword
+mysql> connect test
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Connection id:    134
+Current database: test
+
+mysql> describe customer;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| id      | bigint       | NO   | PRI | NULL    |       |
+| active  | bit(1)       | YES  |     | NULL    |       |
+| address | varchar(255) | YES  |     | NULL    |       |
+| age     | int          | YES  |     | NULL    |       |
+| name    | varchar(255) | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql>
