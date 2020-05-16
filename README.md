@@ -3,7 +3,8 @@
 # Maven build without running unit test
 e.g.
 C:\Users\Tariq Ahsan\Desktop\Docker\DockerComposeSpringBootAngularMySQL\spring-boot-restapi-mysql-master>mvn install -DskipTests
-
+# Angular install packages, and any packages that it depends on.
+C:\Users\Tariq Ahsan\Desktop\Docker\DockerComposeSpringBootAngularMySQL\angular-material>npm install g --save
 # Angular build to create artifacts in the /dist directory
 e.g.
 C:\Users\Tariq Ahsan\Desktop\Docker\DockerComposeSpringBootAngularMySQL\angular-material>ng build --prod
@@ -45,4 +46,15 @@ mysql> describe customer;
 +---------+--------------+------+-----+---------+-------+
 5 rows in set (0.01 sec)
 
-mysql>
+mysql> insert into customer values(1, false, '42766 locklear ter., chantilly, va 20152', 58, 'Tariq Ahsan');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from customer;
++----+----------------+------------------------------------------+------+-------------+
+| id | active         | address                                  | age  | name        |
++----+----------------+------------------------------------------+------+-------------+
+|  1 | 0x00           | 42766 locklear ter., chantilly, va 20152 |   58 | Tariq Ahsan |
++----+----------------+------------------------------------------+------+-------------+
+1 row in set (0.00 sec)
+
+
